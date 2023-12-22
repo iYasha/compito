@@ -3,7 +3,7 @@ import sys
 from argparse import ArgumentParser, ArgumentError
 from typing import Optional
 
-from command_executor.scheduler import Scheduler
+from compito.scheduler import Scheduler
 
 
 class Command:

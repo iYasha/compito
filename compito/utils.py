@@ -6,7 +6,7 @@ import sys
 import traceback
 from typing import Dict, Type
 
-from command_executor.command import Command
+from compito.command import Command
 
 
 @functools.lru_cache(maxsize=None)

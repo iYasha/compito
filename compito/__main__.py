@@ -1,6 +1,6 @@
 import sys
 
-from command_executor.command_manager import execute_from_command_line
+from compito.command_manager import execute_from_command_line
 
 
 def main() -> None:

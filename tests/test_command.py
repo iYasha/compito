@@ -2,8 +2,8 @@ import sys
 import unittest
 from argparse import ArgumentParser
 
-from command_executor.command import Command
-from command_executor.scheduler import Scheduler, _Scheduler
+from compito.command import Command
+from compito.scheduler import Scheduler, _Scheduler
 
 
 class EchoCommand(Command):

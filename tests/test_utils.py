@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import MagicMock, patch
-from command_executor.utils import get_commands
+from compito.utils import get_commands
 
 class TestGetCommands(unittest.TestCase):
     @patch('command_executor.utils.os')

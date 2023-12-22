@@ -3,8 +3,8 @@ import sys
 from argparse import ArgumentParser
 from difflib import get_close_matches
 
-from command_executor.schedule_manager import ScheduleManager
-from command_executor.utils import get_commands
+from compito.schedule_manager import ScheduleManager
+from compito.utils import get_commands
 
 
 class CommandManager:

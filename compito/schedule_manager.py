@@ -3,8 +3,8 @@ import multiprocessing
 import sys
 from typing import List
 
-from command_executor.command import Command
-from command_executor.utils import get_commands
+from compito.command import Command
+from compito.utils import get_commands
 
 
 class ScheduleManager:
