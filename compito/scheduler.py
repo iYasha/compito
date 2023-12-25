@@ -3,8 +3,6 @@ from datetime import datetime
 try:
     from croniter import croniter
 except ImportError:
-    import warnings
-    warnings.warn('You need to install croniter to use scheduler')
     croniter = None
 
 

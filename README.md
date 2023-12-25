@@ -17,6 +17,7 @@ The project provides a command-line interface for scheduling and executing comma
 ```bash
 python -m compito <command> [options] [args]
 ```
+You can find more examples in [examples](examples) directory.
 
 ## Commands
 Each command can be scheduled to run at specific intervals using the `Scheduler` class.

@@ -13,7 +13,7 @@ class CommandManager:
         self.argv = argv or sys.argv[:]
         self.command_name = os.path.basename(self.argv[0])
         if self.command_name == "__main__.py":
-            self.command_name = "python -m command_executor"
+            self.command_name = "python -m compito"
 
     def fetch_command(self, subcommand):
         commands = get_commands()

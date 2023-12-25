@@ -3,10 +3,10 @@ from unittest.mock import MagicMock, patch
 from compito.utils import get_commands
 
 class TestGetCommands(unittest.TestCase):
-    @patch('command_executor.utils.os')
-    @patch('command_executor.utils.importlib')
-    @patch('command_executor.utils.inspect')
-    @patch('command_executor.utils.pkgutil')
+    @patch('compito.utils.os')
+    @patch('compito.utils.importlib')
+    @patch('compito.utils.inspect')
+    @patch('compito.utils.pkgutil')
     def test_get_commands(self, mock_pkgutil, mock_inspect, mock_importlib, mock_os):
         mock_os.walk.return_value = [('/path/to/package', ['subpackage'], ['module.py'])]
         mock_pkgutil.iter_modules.return_value = [(None, 'module', False)]

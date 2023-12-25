@@ -1,4 +1,5 @@
 import abc
+import asyncio
 import sys
 from argparse import ArgumentParser, ArgumentError
 from typing import Optional
@@ -47,3 +48,16 @@ class Command:
 
             sys.stderr.write("%s: %s" % (e.__class__.__name__, e))
             sys.exit(1)
+
+
+class AsyncCommand(Command):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.loop = asyncio.get_event_loop()
+
+    async def handle(self, *args, **kwargs) -> None:
+        pass
+
+    def execute(self, *args, **kwargs):
+        self.loop.run_until_complete(self.handle(*args, **kwargs))
