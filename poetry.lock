@@ -56,5 +56,5 @@ croniter = []
 
 [metadata]
 lock-version = "2.0"
-python-versions = "^3.12"
-content-hash = "a4ab3fcf8add0b70046e9d425b584f50d0cc365576640b7cb3b11cc7792da010"
+python-versions = "^3.8"
+content-hash = "72fe63c2e74ed086394f374ad10386fac0b6c3dd3a7f7a6d05bb8653d91903d9"
