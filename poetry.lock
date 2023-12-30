@@ -52,9 +52,9 @@ files = [
 ]
 
 [extras]
-croniter = []
+croniter = ["croniter"]
 
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "72fe63c2e74ed086394f374ad10386fac0b6c3dd3a7f7a6d05bb8653d91903d9"
+content-hash = "01ee94c6ed69213fc2bc48e158a1d0362eb4d20a4b2791168b6e08215232e441"
