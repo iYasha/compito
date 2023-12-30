@@ -18,9 +18,9 @@ class ScheduleManager:
 
     def start_scheduled_commands(self):
         candidates = self.get_start_candidates()
-        sys.stdout.write(f'[{self.utcnow}] Starting {len(candidates)} scheduled commands:\n\n')
+        sys.stdout.write(f'[{self.utcnow}] Starting {len(candidates)} scheduled commands:\n')
         sys.stdout.write(
-            '\n'.join([f"{command.command_name}({command.scheduler.cron_pattern})" for command in candidates])
+            '\n'.join([f"{command.command_name}({command.scheduler.cron_pattern})\n" for command in candidates])
         )
         processes = []
         for command in candidates:
