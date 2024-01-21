@@ -18,10 +18,10 @@ class Command:
         pass
 
     @cached_property
-    def _get_default_args(self) -> Dict[str, any]:
+    def default_args(self) -> Dict[str, any]:
         parser = self.create_parser()
         parser.add_argument("args", nargs="*")
-        parsed_args = parser.parse_args().__dict__
+        parsed_args = vars(parser.parse_args([]))
         parsed_args.pop('args', None)
         return parsed_args
 
@@ -35,7 +35,7 @@ class Command:
         return parser
 
     def execute(self, *args, **kwargs):
-        self.handle(*args, **kwargs, **self._get_default_args)
+        self.handle(*args, **kwargs)
 
     def add_arguments(self, parser):
         """
@@ -61,9 +61,6 @@ class Command:
 
 class AsyncCommand(Command):
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
     async def handle(self, *args, **kwargs) -> None:
         pass
 
@@ -81,4 +78,4 @@ class AsyncCommand(Command):
 
     def execute(self, *args, **kwargs):
         loop = self._get_event_loop()
-        loop.run_until_complete(self.handle(*args, **kwargs, **self._get_default_args))
+        loop.run_until_complete(self.handle(*args, **kwargs))
